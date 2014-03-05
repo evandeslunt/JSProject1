@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script type="text/javascript" src="conjugator.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Spanish Verb Conjugator</title>
+<header><h1>Spanish Verb Conjugation</h1></header>
+</head>
+
+<body>
+
+ <ul class="tabNavigation">
+   <li><a href="#introduction">Introduction</a></li>
+   <li><a href="#conjugator">Practice</a></li>
+   <li><a href="#conclusion">Conclusion</a></li>
+ </ul>
+
+<div id="wrapper">
+<div class="tabs">
+
+<div id="introduction" class="tab">
+	<h2>Verb Agreement and Conjugation</h2>
+	<p>In many languages, verbs must agree with their subject. In English, we add an -s to
+	 verbs when the subject is third person singular:</p>
+	<table>
+		<tr>
+			<th>Third Person Singular</th>
+			<th>First Person Singular</th>
+			<th>Third Person Plural</th>
+		</tr>
+		<tr>
+			<td>He walks</td>
+			<td>I walk</td>
+			<td>They walk</td>
+		</tr>
+		<tr>
+			<td>She says</td>
+			<td>I say</td>
+			<td>They say</td>
+		</tr>
+	</table>
+	<p>In other languages, such as Spanish, the rules for verb agreement are more complex.
+	Spanish verbs must be changed so they agree with their subject and the tense. This is
+	called "conjugation."</p>
+	<p>To conjugate a Spanish verb, you must first look at the last
+	two letters of the verb ("ar", "er", or "ir"), then replace those letters with the 
+	suffix that agrees with the subject and tense. The three tables below show the suffixes for
+	each type of verb in the present tense.</p>
+	<h3>Spanish Verb Suffixes (Present Tense)</h3>
+	<table>
+	<tr>
+		<th>Spanish Pronoun</th>
+		<th>English Pronoun</th>
+		<th>-ar Suffix</th>
+		<th>-er Suffix</th>
+		<th>-ir Suffix</th>
+	</tr>
+	<tr>
+    	<td>Yo</td>
+    	<td>I</td>
+        <td>-o</td>
+        <td>-o</td>
+        <td>-o</td>
+    </tr>
+    <tr>
+    	<td>Tu</td>
+    	<td>You</td>
+        <td>-as</td>
+        <td>-es</td>
+        <td>-es</td>
+    </tr>
+    <tr>
+    	<td>El/Ella/Usted</td>
+    	<td>He/She/You</td>
+        <td>-a</td>
+        <td>-e</td>
+        <td>-e</td>
+    </tr>
+    <tr>
+     	<td>Vosotros*</td>
+        <td>You</td>
+        <td>-&aacute;s</td>
+        <td>-&eacute;s</td>
+        <td>-&iacute;s</td>
+    </tr>
+		<td>Nosotros</td>
+        <td>We</td>
+        <td>-amos</td>
+        <td>-emos</td>
+        <td>-imos</td>
+    <tr>
+    	<td>Ellos/Ellas/Ustedes</td>
+      	<td>They/You</td>
+        <td>-an</td>
+        <td>-en</td>
+        <td>-en</td>
+    </tr>
+	</table>
+	<p class="small">*Vosotros is primarily used in Spain. Most dialects of South American Spanish do not use
+    Vosotros, so it	is usually left out of conjugation tables created for people learning South American
+	Spanish.</p>
+	
+	<p>Of course, as with every rule, there are exceptions! "Irregular" verbs do not follow
+	these patterns. But most Spanish verbs are regular, or very close to regular. Click
+	the next tab to practice conjugating some regular verbs!</p>
+	
+</div> <!-- introduction -->
+
+<div id="conjugator" class="tab">
+<h2>Spanish Verb Conjugator</h2>
+<p>Enter a regular infinitive verb below to see the present tense conjugations.</p>
+
+<form id="conjform">
+<div class="inputarea"><label for="word">Infinitive Verb:</label><input required type="text" name="word" id="word" value="hablar" /></div>
+<div class="inputarea"><label for="showVos">Include Vosotros?</label><input type="checkbox" name="vos" id="showVos" /></div>
+<div class="inputarea eng"><input id="conjugateBtn" type="button" value="Conjugate!" /></div>
+</form>
+
+<div id="examples">
+	<h3>Examples</h3>
+	<p>Here are some regular verbs to conjugate:</p>
+	<ul>
+		<li>hablar ("talk")</li>
+		<li>caminar ("walk")</li>
+		<li>escribir ("write")</li>
+		<li>comer ("eat")</li>
+		<li>beber ("drink")</li>
+		<li>vivir ("live")</li>
+	</ul>
+</div> <!--examples-->
+
+<div id="results">
+<h3 id="verbname">HABLAR</h3>
+<table id="conjugations">
+	<tr>
+    	<td class="pro">YO</td>
+        <td id="yo" class="verb">hablo</td>
+        <td class="pro">VOS</td>
+        <td id="vos" class="verb">hablais</td>
+    </tr>
+    <tr>
+    	<td class="pro">TU</td>
+        <td id="tu" class="verb">hablas</td>
+        <td class="pro">NOS</td>
+        <td id="nos" class="verb">hablamos</td>
+    </tr>
+    <tr>
+    	<td class="pro"><p>EL/ELLA/USTED</p></td>
+        <td id="el" class="verb">habla</td>
+      <td class="pro">ELLOS/ELLAS/USTEDES</td>
+        <td id="ellos" class="verb">hablan</td>
+    </tr>
+</table>
+
+</div> <!--results-->
+</div> <!--conjugator-->
+
+<div id="conclusion" class="tab">
+<h2>Conclusion</h2>
+<p>If you want to speak with proper grammar, it's important to conjugate your verbs correctly.
+English verb conjugation is easy (just add -s to third person singular in the present
+tense) but in other languages, conjugation is more complicated.</p>
+<p>We've only looked at Spanish regular verbs in the present tense. There are more rules for
+irregular verbs, semi-irregular verbs, and verbs in other tenses.</p> 
+</div><!--conclusion-->
+
+
+
+</div> <!--tabs-->
+</div> <!--wrapper-->
+
+</body>
+</html>

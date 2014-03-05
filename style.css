@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/* General document formatting */
+body { font-family:Tahoma, Geneva, sans-serif; background-color: #FF6; }
+h1 { margin: 0 0 30px 0; text-align: center; }
+h2 { margin: 0; }
+#wrapper {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #CF6;
+	border: 1px solid #0C9;
+	box-shadow: 2px 2px 2px #B8E65C;
+	padding: 1em 1em 1em 1em;
+	overflow: auto;
+}
+
+/* Tab formatting */
+.tabNavigation {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.tabNavigation ul {	list-style: none; margin-bottom: 0; }
+.tabNavigation li { display: inline-block;  margin-bottom: 0;}
+.tabNavigation a {	
+	font-weight: bold;
+	color: black;
+	width: 100px;
+	padding: 1em 1em 1em 1em;
+	text-align: center;
+	background-color: #CF6;
+	border: 1px solid #0C9;
+	border-bottom: 1px solid #CF6; 
+}
+.tabNavigation a:hover {
+	text-decoration: none;
+	border: 2px solid #0C9;
+	border-bottom: 1px solid #CF6;
+}
+
+
+/* Formatting for tables */
+table { 
+	fontweight: bold; 
+	border: 1px; 
+	background-color: #099; 
+}
+tr:nth-child(odd)  { background-color: #0C9; }
+tr:nth-child(even) { background-color: #6FC; }
+.pro  { font-weight: bold; width: 160px; }
+.verb { width: 200px; } 
+
+/* Conjugation tab formatting */
+#conjform, #examples {
+	float: left;
+	background-color: #0C9;
+	margin: 0 15px 15px 15px;
+	border: 1px solid #099;
+	padding: 0 1em 0 1em;
+	width: 280px;
+}
+#conjform { padding: 1em 1em 1em 1em; }
+#verbname { text-align: center; clear: both; }
+#results {
+	width: 720px;
+	clear: both;
+	display: none; /* hidden until you conjugate a verb */
+}
+
+/* This code makes labels and input display in a grid */
+label { width: 125px; display: inline-block; }
+input { display: inline-block; }
+.inputarea { padding: 0 0 5px 0; }
+
+/* Specific formatting styles */
+.feedback {
+	background-color: yellow;
+	font-weight: bold;
+	padding: 1em 1em 1em 1em;
+	margin: 0 15px 0 15px;
+	width: 280px;
+}
+.small{ font-size: 75%;	font-style: Italic; }
+.hidden { display: none; }
